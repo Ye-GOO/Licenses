@@ -1,160 +1,147 @@
-def setupUi(self, MainWindow):
-    MainWindow.setObjectName("MainWindow")
-    MainWindow.resize(1213, 670)
-    MainWindow.setFixedSize(1213, 670)  # 设置窗体固定大小
-    MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
-    self.centralwidget = QtWidgets.QWidget(MainWindow)
-    self.centralwidget.setObjectName("centralwidget")
-    self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
-    self.scrollArea.setGeometry(QtCore.QRect(690, 40, 511, 460))
-    self.scrollArea.setWidgetResizable(True)
-    self.scrollArea.setObjectName("scrollArea")
-    self.scrollAreaWidgetContents = QtWidgets.QWidget()
-    self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 500, 489))
-    self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
-    self.label_0 = QtWidgets.QLabel(self.scrollAreaWidgetContents)
-    self.label_0.setGeometry(QtCore.QRect(10, 10, 111, 20))
-    font = QtGui.QFont()
-    font.setPointSize(11)
-    self.label_0.setFont(font)
-    self.label_0.setObjectName("label_0")
-    self.label = QtWidgets.QLabel(self.scrollAreaWidgetContents)
-    self.label.setGeometry(QtCore.QRect(10, 40, 481, 420))
-    self.label.setObjectName("label")
-    self.label.setAlignment(Qt.AlignCenter)
-    self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-    self.scrollArea_2 = QtWidgets.QScrollArea(self.centralwidget)
-    self.scrollArea_2.setGeometry(QtCore.QRect(10, 10, 671, 631))
-    self.scrollArea_2.setWidgetResizable(True)
-    self.scrollArea_2.setObjectName("scrollArea_2")
-    self.scrollAreaWidgetContents_1 = QtWidgets.QWidget()
-    self.scrollAreaWidgetContents_1.setGeometry(QtCore.QRect(0, 0, 669, 629))
-    self.scrollAreaWidgetContents_1.setObjectName("scrollAreaWidgetContents_1")
-    self.label_1 = QtWidgets.QLabel(self.scrollAreaWidgetContents_1)
-    self.label_1.setGeometry(QtCore.QRect(10, 10, 111, 20))
-    font = QtGui.QFont()
-    font.setPointSize(11)
-    self.label_1.setFont(font)
-    self.label_1.setObjectName("label_1")
-    self.tableWidget = QtWidgets.QTableWidget(self.scrollAreaWidgetContents_1)
-    self.tableWidget.setGeometry(QtCore.QRect(10, 40, 651, 581))  # 581))
-    self.tableWidget.setObjectName("tableWidget")
-    self.tableWidget.setColumnCount(5)
-    self.tableWidget.setColumnWidth(0, 140)  # 设置1列的宽度
-    self.tableWidget.setColumnWidth(1, 130)  # 设置2列的宽度
-    self.tableWidget.setColumnWidth(2, 110)  # 设置3列的宽度
-    self.tableWidget.setColumnWidth(3, 90)  # 设置4列的宽度
-    self.tableWidget.setColumnWidth(4, 181)  # 设置5列的宽度
-    self.tableWidget.setHorizontalHeaderLabels(["图片名称", "录入时间", "车牌号码", "车牌类型", "车牌信息"])
-    self.tableWidget.setRowCount(self.RowLength)
-    self.tableWidget.verticalHeader().setVisible(False)  # 隐藏垂直表头)
-    self.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-    self.tableWidget.raise_()
-    self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_1)
-    self.scrollArea_3 = QtWidgets.QScrollArea(self.centralwidget)
-    self.scrollArea_3.setGeometry(QtCore.QRect(690, 510, 341, 131))
-    self.scrollArea_3.setWidgetResizable(True)
-    self.scrollArea_3.setObjectName("scrollArea_3")
-    self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-    self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 339, 129))
-    self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
-    self.label_2 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-    self.label_2.setGeometry(QtCore.QRect(10, 10, 111, 20))
-    font = QtGui.QFont()
-    font.setPointSize(11)
-    self.label_2.setFont(font)
-    self.label_2.setObjectName("label_2")
-    self.label_3 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-    self.label_3.setGeometry(QtCore.QRect(10, 40, 321, 81))
-    self.label_3.setObjectName("label_3")
-    self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
-    self.scrollArea_4 = QtWidgets.QScrollArea(self.centralwidget)
-    self.scrollArea_4.setGeometry(QtCore.QRect(1040, 510, 161, 131))
-    self.scrollArea_4.setWidgetResizable(True)
-    self.scrollArea_4.setObjectName("scrollArea_4")
-    self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-    self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 159, 129))
-    self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
-    self.pushButton_2 = QtWidgets.QPushButton(self.scrollAreaWidgetContents_4)
-    self.pushButton_2.setGeometry(QtCore.QRect(20, 50, 121, 31))
-    self.pushButton_2.setObjectName("pushButton_2")
-    self.pushButton = QtWidgets.QPushButton(self.scrollAreaWidgetContents_4)
-    self.pushButton.setGeometry(QtCore.QRect(20, 90, 121, 31))
-    self.pushButton.setObjectName("pushButton")
-    self.label_4 = QtWidgets.QLabel(self.scrollAreaWidgetContents_4)
-    self.label_4.setGeometry(QtCore.QRect(10, 10, 111, 20))
-    font = QtGui.QFont()
-    font.setPointSize(11)
-    self.label_4.setFont(font)
-    self.label_4.setObjectName("label_4")
-    self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_4)
-    MainWindow.setCentralWidget(self.centralwidget)
-    self.statusbar = QtWidgets.QStatusBar(MainWindow)
-    self.statusbar.setObjectName("statusbar")
-    MainWindow.setStatusBar(self.statusbar)
-    self.retranslateUi(MainWindow)
-    QtCore.QMetaObject.connectSlotsByName(MainWindow)
-    self.retranslateUi(MainWindow)
-    QtCore.QMetaObject.connectSlotsByName(MainWindow)
-    self.pushButton.clicked.connect(self.__openimage)  # 设置点击事件
-    self.pushButton.setStyleSheet(
-        '''QPushButton{background:#222225;border-radius:5px;}QPushButton:hover{background:#2B2B2B;}''')
-    self.pushButton_2.clicked.connect(self.__writeFiles)  # 设置点击事件
-    self.pushButton_2.setStyleSheet(
-        '''QPushButton{background:#222225;border-radius:5px;}QPushButton:hover{background:#2B2B2B;}''')
-    self.retranslateUi(MainWindow)
-    self.close_widget = QtWidgets.QWidget(self.centralwidget)
-    self.close_widget.setGeometry(QtCore.QRect(1130, 0, 90, 50))
-    self.close_widget.setObjectName("close_widget")
-    self.close_layout = QGridLayout()  # 创建左侧部件的网格布局层
-    self.close_widget.setLayout(self.close_layout)  # 设置左侧部件布局为网格
-    self.left_close = QPushButton("")  # 关闭按钮
-    self.left_close.clicked.connect(self.close)
-    self.left_visit = QPushButton("")  # 空白按钮
-    self.left_visit.clicked.connect(MainWindow.big)
-    self.left_mini = QPushButton("")  # 最小化按钮
-    self.left_mini.clicked.connect(MainWindow.mini)
-    self.close_layout.addWidget(self.left_mini, 0, 0, 1, 1)
-    self.close_layout.addWidget(self.left_close, 0, 2, 1, 1)
-    self.close_layout.addWidget(self.left_visit, 0, 1, 1, 1)
-    self.left_close.setFixedSize(15, 15)  # 设置关闭按钮的大小
-    self.left_visit.setFixedSize(15, 15)  # 设置按钮大小
-    self.left_mini.setFixedSize(15, 15)  # 设置最小化按钮大小
-    self.left_close.setStyleSheet(
-        '''QPushButton{background:#F76677;border-radius:5px;}QPushButton:hover{background:red;}''')
-    self.left_visit.setStyleSheet(
-        '''QPushButton{background:#F7D674;border-radius:5px;}QPushButton:hover{background:yellow;}''')
-    self.left_mini.setStyleSheet(
-        '''QPushButton{background:#6DDF6D;border-radius:5px;}QPushButton:hover{background:green;}''')
-
-    QtCore.QMetaObject.connectSlotsByName(MainWindow)
-    self.ProjectPath = os.getcwd()  # 获取当前工程文件位置
-    self.scrollAreaWidgetContents.setStyleSheet(sc)
-    self.scrollAreaWidgetContents_3.setStyleSheet(sc)
-    self.scrollAreaWidgetContents_4.setStyleSheet(sc)
-    b = '''
-         color:white;
-         background:#2B2B2B;
-        '''
-    self.label_0.setStyleSheet(b)
-    self.label_1.setStyleSheet(b)
-    self.label_2.setStyleSheet(b)
-    self.label_3.setStyleSheet(b)
-    MainWindow.setWindowOpacity(0.95)  # 设置窗口透明度
-    MainWindow.setAttribute(Qt.WA_TranslucentBackground)
-    MainWindow.setWindowFlag(Qt.FramelessWindowHint)  # 隐藏边框
+import tkinter as tk
+from tkinter.filedialog import *
+from tkinter import ttk
+import predict
+import cv2
+from PIL import Image, ImageTk
+import threading
+import time
 
 
+class Surface(ttk.Frame):
+    pic_path = ""
+    viewhigh = 600
+    viewwide = 600
+    update_time = 0
+    thread = None
+    thread_run = False
+    camera = None
+    color_transform = {"green": ("绿牌", "#55FF55"), "yello": ("黄牌", "#FFFF00"), "blue": ("蓝牌", "#6666FF")}
 
-def retranslateUi(self, MainWindow):
-    _translate = QtCore.QCoreApplication.translate
-    MainWindow.setWindowTitle(_translate("MainWindow", "车牌识别系统"))
-    self.label_0.setText(_translate("MainWindow", "原始图片："))
-    self.label.setText(_translate("MainWindow", ""))
-    self.label_1.setText(_translate("MainWindow", "识别结果："))
-    self.label_2.setText(_translate("MainWindow", "车牌区域："))
-    self.label_3.setText(_translate("MainWindow", ""))
-    self.pushButton.setText(_translate("MainWindow", "打开文件"))
-    self.pushButton_2.setText(_translate("MainWindow", "导出数据"))
-    self.label_4.setText(_translate("MainWindow", "事件："))
-    self.scrollAreaWidgetContents_1.show()
+    def __init__(self, win):
+        ttk.Frame.__init__(self, win)
+        frame_left = ttk.Frame(self)
+        frame_right1 = ttk.Frame(self)
+        frame_right2 = ttk.Frame(self)
+        win.title("车牌识别")
+        win.state("zoomed")
+        self.pack(fill=tk.BOTH, expand=tk.YES, padx="5", pady="5")
+        frame_left.pack(side=LEFT, expand=1, fill=BOTH)
+        frame_right1.pack(side=TOP, expand=1, fill=tk.Y)
+        frame_right2.pack(side=RIGHT, expand=0)
+        ttk.Label(frame_left, text='原图：').pack(anchor="nw")
+        ttk.Label(frame_right1, text='车牌位置：').grid(column=0, row=0, sticky=tk.W)
+
+        from_pic_ctl = ttk.Button(frame_right2, text="来自图片", width=20, command=self.from_pic)
+        from_vedio_ctl = ttk.Button(frame_right2, text="来自摄像头", width=20, command=self.from_vedio)
+        self.image_ctl = ttk.Label(frame_left)
+        self.image_ctl.pack(anchor="nw")
+
+        self.roi_ctl = ttk.Label(frame_right1)
+        self.roi_ctl.grid(column=0, row=1, sticky=tk.W)
+        ttk.Label(frame_right1, text='识别结果：').grid(column=0, row=2, sticky=tk.W)
+        self.r_ctl = ttk.Label(frame_right1, text="")
+        self.r_ctl.grid(column=0, row=3, sticky=tk.W)
+        self.color_ctl = ttk.Label(frame_right1, text="", width="20")
+        self.color_ctl.grid(column=0, row=4, sticky=tk.W)
+        from_vedio_ctl.pack(anchor="se", pady="5")
+        from_pic_ctl.pack(anchor="se", pady="5")
+        self.predictor = predict.CardPredictor()
+        self.predictor.train_svm()
+
+    def get_imgtk(self, img_bgr):
+        img = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
+        im = Image.fromarray(img)
+        imgtk = ImageTk.PhotoImage(image=im)
+        wide = imgtk.width()
+        high = imgtk.height()
+        if wide > self.viewwide or high > self.viewhigh:
+            wide_factor = self.viewwide / wide
+            high_factor = self.viewhigh / high
+            factor = min(wide_factor, high_factor)
+
+            wide = int(wide * factor)
+            if wide <= 0: wide = 1
+            high = int(high * factor)
+            if high <= 0: high = 1
+            im = im.resize((wide, high), Image.ANTIALIAS)
+            imgtk = ImageTk.PhotoImage(image=im)
+        return imgtk
+
+    def show_roi(self, r, roi, color):
+        if r:
+            roi = cv2.cvtColor(roi, cv2.COLOR_BGR2RGB)
+            roi = Image.fromarray(roi)
+            self.imgtk_roi = ImageTk.PhotoImage(image=roi)
+            self.roi_ctl.configure(image=self.imgtk_roi, state='enable')
+            self.r_ctl.configure(text=str(r))
+            self.update_time = time.time()
+            try:
+                c = self.color_transform[color]
+                self.color_ctl.configure(text=c[0], background=c[1], state='enable')
+            except:
+                self.color_ctl.configure(state='disabled')
+        elif self.update_time + 8 < time.time():
+            self.roi_ctl.configure(state='disabled')
+            self.r_ctl.configure(text="")
+            self.color_ctl.configure(state='disabled')
+
+    def from_vedio(self):
+        if self.thread_run:
+            return
+        if self.camera is None:
+            self.camera = cv2.VideoCapture(0)
+            if not self.camera.isOpened():
+                mBox.showwarning('警告', '摄像头打开失败！')
+                self.camera = None
+                return
+        self.thread = threading.Thread(target=self.vedio_thread, args=(self,))
+        self.thread.setDaemon(True)
+        self.thread.start()
+        self.thread_run = True
+
+    def from_pic(self):
+        self.thread_run = False
+        self.pic_path = askopenfilename(title="选择识别图片", filetypes=[("jpg图片", "*.jpg")])
+        if self.pic_path:
+            img_bgr = predict.imreadex(self.pic_path)
+            self.imgtk = self.get_imgtk(img_bgr)
+            self.image_ctl.configure(image=self.imgtk)
+            resize_rates = (1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4)
+            for resize_rate in resize_rates:
+                print("resize_rate:", resize_rate)
+                r, roi, color = self.predictor.predict(img_bgr, resize_rate)
+                if r:
+                    break
+            # r, roi, color = self.predictor.predict(img_bgr, 1)
+            self.show_roi(r, roi, color)
+
+    @staticmethod
+    def vedio_thread(self):
+        self.thread_run = True
+        predict_time = time.time()
+        while self.thread_run:
+            _, img_bgr = self.camera.read()
+            self.imgtk = self.get_imgtk(img_bgr)
+            self.image_ctl.configure(image=self.imgtk)
+            if time.time() - predict_time > 2:
+                r, roi, color = self.predictor.predict(img_bgr)
+                self.show_roi(r, roi, color)
+                predict_time = time.time()
+        print("run end")
+
+
+def close_window():
+    print("destroy")
+    if surface.thread_run:
+        surface.thread_run = False
+        surface.thread.join(2.0)
+    win.destroy()
+
+
+if __name__ == '__main__':
+    win = tk.Tk()
+
+    surface = Surface(win)
+    win.protocol('WM_DELETE_WINDOW', close_window)
+    win.mainloop()
